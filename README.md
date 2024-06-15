@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Albert's Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my blog! I'm Albert, a Computer Science undergraduate. This blog is a place where I share my thoughts, ideas, and experiences related to computer science and my journey as a student.  
 
-## Available Scripts
+TBH, I don't want to cover only CS stuff, but as you can see, I am a CS undergraduate. You know the purpose of most CS undergraduate writing a blog: yeah, absolutely passionate. However, I want to treat it as one of my personal projects to show my understanding of computer science especially software engineering to get a internship and, finally, a job 😂.   
+Hope one day I can write something else (maybe something about language learnign cause I am interested in human language but can only use English and Chinese,HAHAHA, I can't even say I can speek mandarin flutely😵‍💫, yeah, I come from Sichuan), but if I wrote something not about CS and offense you it is my fault.
 
-In the project directory, you can run:
+## Copyright Notice and Disclaimer
 
-### `npm start`
+All code in this repository is free to copy, modify, and distribute. While I am trying my best to provide references for the content, due to my own limitations and laziness😪, especially with the notes, it's possible that some content may not be properly attributed. If you find any content that lacks proper attribution, please contact me and I will remove it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In the future, I plan to standardize my articles and automate the provision of references to ensure all content is properly attributed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Please note that while I am doing my best to ensure the accuracy of the information in this blog, I cannot guarantee it. Use the information at your own risk. I am not responsible for any consequences that may arise from the use of the information in this blog.
 
-### `npm test`
+For any issues, please contact me at zhaoq@kean.edu.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## About the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This frontend side is built with React, Redux, React-Router, and MUI to keep simplfied.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://reactjs.org">
+  <img src="./assets/react.svg" alt="Image description" style="width:50px; height:50px; margin:25px;">
+</a>
+<a href="https://redux.js.org">
+  <img src="./assets/redux.svg" alt="Image description" style="width:50px; height:50px; margin:25px;">
+</a>
+<a href="https://reactrouter.com">
+  <img src="./assets/reactrouter.svg" alt="Image description" style="width:50px; height:50px; margin:25px;">
+</a>
+<a href="https://mui.com">
+  <img src="./assets/mui.svg" alt="Image description" style="width:50px; height:50px; margin:25px;">
+</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The details will be discussed latter.    
+....
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Topics
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here are some of the topics you might find here:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Algorithms and Data Structures
+- Web Development
+- Software Engineering
+- And much more!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running the Project Locally
 
-## Learn More
+To run the project on your local machine and make your own one, follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository: `git clone https://github.com/AlbertZhaoCA/aboutme.git`
+2. Navigate into the directory: `cd repository`
+3. Install the dependencies: `npm install`
+4. Start the server: `npm start`
+5. make your own change and happy hacking 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+While this is primarily a personal blog, I'm open to contributions that can help improve the site or fix issues. If you'd like to contribute, please feel free to open a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
+If you have any questions or comments, feel free to reach out to me at zhaoq@kean.edu.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for stopping by!
