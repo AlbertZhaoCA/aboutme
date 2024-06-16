@@ -3,11 +3,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto";
+}
 
+html{
+    height: 100%;
 }
 
 body{
     height: 100%;
+    overflow: hidden;
 }
 
 .centerImg{
@@ -15,5 +19,9 @@ body{
     margin: 0 auto;
     width: 50%;
     height: 50%;
+}
+
+#root{
+    height: 100%;
 
 }
