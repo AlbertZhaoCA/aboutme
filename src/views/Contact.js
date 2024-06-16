@@ -1,5 +1,9 @@
+import { Container,Box } from "@mui/material";
 function Contact() {
-    return (<h1>Contact</h1>);
+    return ( 
+        <Container>contact under destructed
+        </Container>
+    );
 };
 
 export default Contact;

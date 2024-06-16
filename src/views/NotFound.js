@@ -36,7 +36,7 @@ function NotFound() {
                     <Typography variant="body1"
                         component="h1"
                         gutterBottom
-                        align='center'> 不好意思，此资源不存在，3s后将为你重定向
+                        align='center'> Sorry, this resource does not exsits 🥹, redirect to the home page in 3s.
                     </Typography>
                 </Box>
 

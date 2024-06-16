@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
+import ResponsiveAppBar from './components/nav';
+import Footer from "./components/footer";
+import { Box } from "@mui/material";
 
 function Root() {
     return (
-        <div>
-            <h1>root</h1>
+        <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column'}}>
+            <ResponsiveAppBar />
             <Outlet />
-            <h1>root</h1>
-        </div>
-
+            <Footer />
+        </Box>
     );
 };
 
