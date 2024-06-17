@@ -1,5 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import Gallary from "./gallary";
+import useMediaQuery from "../../controller/useMeadiaQuery";
+
 
 /**
  * 
@@ -27,14 +29,33 @@ const list = [
     }
 ]
 
+let styles = {
+    box: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
+    pictures: {
+        width: '30px',
+        height: '30px',
+    }
+}
+
 function Footer() {
+    const boxQueried = useMediaQuery(styles.box, {md: {width: '20%'}, sm: {width: '50%'},lg:{width: '10%'}});
+    const picturesQueried = useMediaQuery(styles.pictures, {md: {width: '30px',margin:'5px'}, sm: {width: '80%'}});
+
+    styles.box = boxQueried;
+    styles.pictures = picturesQueried;
+  
     return (
         <Box sx={{ bgcolor: 'primary.main', color: 'white', p: 1, marginTop: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
             <Typography sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }} variant='body1' align='center'>
                 &copy; {new Date().getFullYear()} Albert
             </Typography>
 
-            <Gallary list={list}/>
+            <Gallary list={list} styles={styles}/>
         </Box>
     )
 }
