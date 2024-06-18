@@ -32,7 +32,7 @@ export default function RandomCat() {
     console.log(styles);
 
  const handleClick = () => {
-    fetch(`http://${process.env.REACT_APP_CAT_API_URL}/cat`)
+    fetch(`https://${process.env.REACT_APP_CAT_API_URL}/cat`)
                     .then(response => response.blob())
                 .then(blob => {
                     const imgURL = URL.createObjectURL(blob);
@@ -41,7 +41,7 @@ export default function RandomCat() {
             };
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_CAT_API_URL}/cat`)
+        fetch(`https://${process.env.REACT_APP_CAT_API_URL}/cat`)
                     .then(response => response.blob())
             .then(blob => {
                 const imgURL = URL.createObjectURL(blob);
