@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 
 function Root() {
     return (
-        <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column'}}>
+        <Box sx={{minHeight: "inherit", display: 'flex', flexDirection: 'column'}}>
             <ResponsiveAppBar />
             <Outlet />
             <Footer />
