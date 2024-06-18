@@ -5,23 +5,31 @@
     font-family: "Roboto";
 }
 
-html{
-    height: 100%;
-}
 
+/* 
+* think about how to eliminate the blanck space at the bottom 
+* of the footer
+*/
 body{
-    height: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+html{
+    min-height: 100vh;
+    background-color:#051b2e;
 }
 
+
+/*
+* bad code, revise it, it is used in 404 page
+*/
 .centerImg{
     display: block;
     margin: 0 auto;
-    width: 50%;
-    height: 50%;
+    width: 25%;
+    height: 25%;
 }
 
-#root{
-    height: 100%;
 
-}
