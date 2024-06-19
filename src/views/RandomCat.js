@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import useMediaQuery from '../controller/useMeadiaQuery';
-import { height, width } from '@mui/system';
 
 let picStyles = {
     width: '200px',
@@ -38,7 +37,7 @@ export default function RandomCat() {
                     const imgURL = URL.createObjectURL(blob);
                     setImgSrc(imgURL);
                 }) .catch(error => alert("sorry, it seems the server is down 🥹"));
-            };
+            };      
 
     useEffect(() => {
         fetch(`https://${process.env.REACT_APP_CAT_API_URL}/cat`)
@@ -61,5 +60,5 @@ export default function RandomCat() {
         >
             {imgSrc && <img onClick={handleClick} style={styles} src={imgSrc} alt="Random Cat" />}
         </Box>
-    );
+    ); 
 }

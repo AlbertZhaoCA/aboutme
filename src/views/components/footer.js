@@ -43,8 +43,8 @@ let styles = {
 }
 
 function Footer() {
-    const boxQueried = useMediaQuery(styles.box, {md: {width: '25%',marginTop:''}, sm: {width: '50%'},lg:{marginTop:'auto'}});
-    const picturesQueried = useMediaQuery(styles.pictures, {md: {width: '30px'}, sm: {width: '80%'}});
+    const boxQueried = useMediaQuery(styles.box, {md: {width: '25%',marginTop:''}, sm: {width: '40%'},lg:{marginTop:'auto'},xs:{marginTop:'auto',width: '75%'} });
+    const picturesQueried = useMediaQuery(styles.pictures, {md: {width: '60px'}, sm: {width: '50px'}});
 
     styles.box = boxQueried;
     styles.pictures = picturesQueried;
