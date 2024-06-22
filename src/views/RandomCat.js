@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import useMediaQuery from '../controller/useMeadiaQuery';
+import RatingGroup from './components/ratingGroup';
 
 let picStyles = {
     width: '200px',
@@ -22,7 +23,6 @@ let queriedStyles = {
         height: "600px",
     }
 };
-
 
 
 export default function RandomCat() {
@@ -58,7 +58,10 @@ export default function RandomCat() {
             gap={4}
             p={2}
         >
+            <Box display='flex' gap={4} >
             {imgSrc && <img onClick={handleClick} style={styles} src={imgSrc} alt="Random Cat" />}
+            <RatingGroup height='100px'/>
+            </Box>
         </Box>
     ); 
 }

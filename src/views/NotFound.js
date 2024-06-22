@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 
 /**
  * 
- * 
  * 404 Not Found page
  * redirect to /albert after 3s
  * 
