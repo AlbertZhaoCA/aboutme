@@ -117,9 +117,8 @@ export default function RandomCat() {
             gap={4}
             p={2}
         >
-            <Typography variant='h6'>I have been seen by {seen} humen, 
-                robots or any other species <br></br> and I was liked by {like} people, 
-                robots, or any other species</Typography>
+            <Typography variant='h6'>I have been seen {seen} times by humans, 
+                robots or any other species <br></br> and I was liked {like} tiems by those kind fella</Typography>
             <Box display='flex' gap={4} >
             {imgSrc && <img onClick={handleClick} style={styles} src={imgSrc} alt="Random Cat" />}
             <RatingGroup onLike = {handleLike} onDislike ={handleDisLike} height='100px'/>
