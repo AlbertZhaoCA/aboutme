@@ -18,7 +18,8 @@ function useGetGitInfo() {
             setGitInfo(data);
             setLoading(false);
         }).
-         /*it is awful, i know, but leaving exception 
+        /*
+        it is awful, i know, but leaving exception 
         handling at the end is also a good choice,:)
         */
         catch(error => {

@@ -8,14 +8,13 @@ export const editorSlice = createSlice(
             closed:true
         },
         reducers:{
-
             toggle:(state)=>{
                 state.closed = !state.closed
             }
-
-            
 
         } 
 
     }
 )
+
+export default editorSlice.reducer;
