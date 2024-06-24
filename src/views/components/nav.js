@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const pages = [
   { name: 'About Me', link: "about", },
@@ -20,16 +20,37 @@ const pages = [
   { name: 'Portfolio', link: "portfolio", },
   { name: 'Strange thinking', link: "thinking", }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 /**
- * 
  * partially copied from https://mui.com/material-ui/react-app-bar/#app-bar-with-responsive-menu
  * nav bar at the top of every page, using nested routers
- * 
  */
 
 function ResponsiveAppBar() {
+    const navigate = useNavigate();
+
+    const settings = [
+    {
+      text: 'Register',
+      onClick: () => {
+        navigate('/albert/register');
+      }
+    },
+    {
+      text: 'Login',
+      onClick: () => {
+        navigate('/albert/login');
+      }
+    },
+    {
+      text: 'HAHAHA',
+      onClick: () => {
+        navigate('/albert/');
+
+      }
+    }
+  ];
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -162,11 +183,11 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+             {settings.map((setting) => (
+              <MenuItem key={setting.text} onClick={setting.onClick}>
+                <Typography textAlign="center">{setting.text}</Typography>
+              </MenuItem>
+            ))}
             </Menu>
           </Box>
         </Toolbar>

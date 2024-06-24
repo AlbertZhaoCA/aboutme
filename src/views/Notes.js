@@ -7,9 +7,6 @@ import Editor from './components/editor';
 function Notes() {
     const notes = useLoaderData();
 
-
-
-
     return (
         <Container sx={{ marginTop: '20px' }}>
             <br></br>
