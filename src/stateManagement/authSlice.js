@@ -8,6 +8,12 @@ const authSlice = createSlice({
         logInfo:{
             user: '',
             password: ''
+        },
+        registerInfo:{
+            user:'',
+            status:null,
+            password:'',
+            
         }
     },
     reducers: {
@@ -18,9 +24,15 @@ const authSlice = createSlice({
         setLogInfo: (state, action) => {
             state.logInfo.user = action.payload.user;
             state.logInfo.password = action.payload.password;
+        },
+        setRegisterInfo: (state, action) => {
+            state.registerInfo.user = action.payload.user;
+            state.registerInfo.status = action.payload.status;
+            state.registerInfo.password = action.payload.password;
+            state.registerInfo.matchPassword = action.payload.matchPassword;
         }
     }
 });
 
 export default authSlice.reducer;
-export const { setUser,setLogInfo } = authSlice.actions;
+export const { setUser,setLogInfo,setRegisterInfo } = authSlice.actions;
