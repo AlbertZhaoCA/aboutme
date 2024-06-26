@@ -50,11 +50,10 @@ function Footer() {
     styles.pictures = picturesQueried;
   
     return (
-        <Box sx={{bgcolor: 'primary.main', color: 'white', p: 1, marginTop: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
+        <Box sx={{bgcolor: 'primary.main', color: 'white', p: 1, marginTop: '100px', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
             <Typography sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }} variant='body1' align='center'>
                 &copy; {new Date().getFullYear()} Albert
             </Typography>
-
             <Gallary list={list} styles={styles}/>
         </Box>
     )
