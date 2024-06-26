@@ -34,8 +34,8 @@ export default function Drawer() {
   );
 
   return (
-    <div>
-      <Chip icon={<UnfoldMoreIcon/>} color={"info"} sx={{position:'fixed',right:'20px',top:'80px'}} label="open notes " onClick={toggleDrawer(true)} />
+    <div >
+      <Chip icon={<UnfoldMoreIcon/>} color={"info"} sx={{position:'fixed',right:'20px',top:'80px', opacity:0.3}} label="open menu" onClick={toggleDrawer(true)} />
       <Drawermui open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawermui>
