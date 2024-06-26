@@ -1,6 +1,6 @@
 import { Box, Container, Divider } from "@mui/material";
 import Drawer from "./components/drawer";
-import { useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import 'quill/dist/quill.snow.css';
 import Editor from './components/editor';
 
@@ -16,6 +16,7 @@ function Notes() {
 
             <Editor />
             <Drawer />
+            <Outlet/>
 
         </Container>
     );

@@ -3,6 +3,7 @@ import { Root, Contact, About, NotFound, Notes, UnderDev, RandomCat, Login, Gene
 import Editor from '../views/components/editor';
 import Register from '../views/Register';
 import RequireAuth from '../views/RequireAuth';
+import { useRouteError } from 'react-router-dom';
 
 /**
  * router of the app
@@ -11,23 +12,24 @@ import RequireAuth from '../views/RequireAuth';
 const router = createBrowserRouter(
     createRoutesFromElements([
         <Route path="/"  loader={() => redirect("/albert")} />,
-        <Route path="/albert"  element={<Root />}>
+        <Route path="/albert"  errorElement={<h1>Error</h1>}  element={<Root />}>
             <Route index element={<RandomCat />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
-            <Route path="notes" element={<Notes />} >
+            <Route path="notes"  element={<Notes />} >
                 <Route path=":id" loader={async ({ params }) => {
-                    try {
                         const response = await fetch(`https://${process.env.REACT_APP_CAT_API_URL}/notes/${params.id}`);
-                        return response.json();
-                    } catch (error) {
-                        throw new Error(error,'Failed to fetch notes');
-                    }
-                }} element={<NotFound /> } errorElement={<NotFound />} >
-                    <Route element={<RequireAuth />} >
-                        <Route path=":id/edit" element={<Editor />} />
+                        if (!response.ok) {
+                            return null;
+                        }
+                        else
+                        return response.json()
+                    
+                }} element={<NotFound />  } >
+                    <Route element={<RequireAuth />}  >
+                        <Route path="edit" element={<Editor />} />
                     </Route>
                 </Route>
             </Route>
@@ -43,4 +45,9 @@ const router = createBrowserRouter(
     )
 );
 
+function ErrorBoundary() {
+    let error = useRouteError();
+    console.error(error);
+    return <div>Dang!</div>;
+  }
 export default router;
